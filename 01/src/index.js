@@ -4,12 +4,12 @@
 
 // import { add } from "./other.js"; //es module
 
-// import css from "./index.css";
-import "./index.css";
-import "./index.less";
+import css from "./index.css";
+// import "./index.css";
+// import "./index.less";
 console.log("xiix");
 
-// console.log("hello webpack!");
+console.log("hello webpack!");
 
 //webpack的默认配置
 // 1.webpack执行构建会找 webpack.config.js这个配置文件，如果没有找到，走默认配置！
