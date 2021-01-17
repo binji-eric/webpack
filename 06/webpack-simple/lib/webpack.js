@@ -45,12 +45,12 @@ module.exports = class webpack {
     // 开始分析入口模块，得到内容，之后需要通过babel的parser，core，preset-env
     const content = fs.readFileSync(entryFile, "utf-8");
 
-    //1, 使用parse分析模块，获得AST(抽象语法树)
+    //1, 使用@babel/parser分析模块，获得AST(抽象语法树)
     const ast = parser.parse(content, {
       sourceType: "module",
     });
 
-    //2, 使用traverse遍历提取分析ast，获得依赖模块
+    //2, 使用@babel/traverse遍历提取分析ast，获得依赖模块
     const dependencies = {};
     traverse(ast, {
       ImportDeclaration({ node }) {
